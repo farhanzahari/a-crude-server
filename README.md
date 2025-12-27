@@ -2,14 +2,23 @@
 A simple server to store item code, name, tags, and it's decription.
 
 ## How to deploy
+You can either use Codespaces.
+
+Or deploy locally into your PC:
+
 1. Clone this repo.
-2. Make sure [Node.js]() is installed.
-3. Navigate the terminal into this file, and then run `npm install`.
-4. Run `npx tsx index.js`
-5. Type 'http://localhost:3000/' to confirm it is alive.
+2. Make sure [Node.js](https://nodejs.org/en) is installed.
+3. Navigate the terminal into this file
+
+Then
+
+1. Run `npm install`.
+2. Run `npx tsx index.js`
+3. Type 'http://localhost:3000/' to confirm it is alive.
 
 ## How to CRUD
-You can use [Postman](https://www.postman.com/downloads/) desktop or [curl](https://curl.se/).
+You can use [curl](https://curl.se/) or if you deploy locally - [Postman](https://www.postman.com/downloads/) desktop.
+
 Available endpoints:
 
 1. POST http://localhost:3000/apiv1/item/create
