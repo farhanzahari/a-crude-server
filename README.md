@@ -9,7 +9,7 @@ A simple server to store item code, name, tags, and it's decription.
 5. Type 'http://localhost:3000/' to confirm it is alive.
 
 ## How to CRUD
-You can use [Postman]() or [curl]().
+You can use [Postman](https://www.postman.com/downloads/) desktop or [curl](https://curl.se/).
 Available endpoints:
 
 1. POST http://localhost:3000/apiv1/item/create
