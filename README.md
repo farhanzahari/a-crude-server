@@ -30,9 +30,9 @@ Available endpoints:
 7. DELETE http://localhost:3000/apiv1/item/delete/:id
 
 ### 1. Create item (http://localhost:3000/apiv1/item/create) (POST)
-The (POST) endpoint will receive JSON data. 
+The (POST) endpoint will receive the item (JSON) data and store it into a database. 
 
-Example payload:
+Example payload (JSON):
 ```json
 {
     "code": "SKU000001", // Required and must be unique.
