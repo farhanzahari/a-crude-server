@@ -202,6 +202,6 @@ The (DELETE) endpoint will delete a resource with the supplied `id`.
 
 Example `curl`:
 
-```curl -X DELETE http://localhost:3000/apiv1/item/delete/id/1```
+`curl -X DELETE http://localhost:3000/apiv1/item/delete/id/1`
 
 will delete the resource with `"id": 1` and return status `204` (nothing).
