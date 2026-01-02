@@ -13,8 +13,11 @@ Or deploy locally into your PC:
 Then
 
 1. Run `npm install`.
-2. Run `npx tsx index.js`
+2. Run `npx tsx index.ts`
 3. Type 'http://localhost:3000/' to confirm it is alive.
+
+*Note:
+- For Codespaces. After `npm install` if Node version error is shown, try `npm rebuild` and run again.
 
 ## How to CRUD
 You can use [curl](https://curl.se/) or if you deploy locally - [Postman](https://www.postman.com/downloads/) desktop.
@@ -44,10 +47,12 @@ Example payload (JSON):
 Upon success the response will send the payload back with status `201`.
 
 Example `curl`:
+
 `curl -X POST http://localhost:3000/apiv1/item/create -H "Content-Type: application/json" -d '{"code":"SKU000001", "name":"Item 1", "tags":"electronics", "description":"Item 1 description."}'`
 will return
 ```json
 {
+    "id": 1,
     "code": "SKU000001",
     "name": "Item 1",
     "tags": "electronics",

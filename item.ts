@@ -35,8 +35,10 @@ router.post('/create', (req, res) => {
     try 
     {
         const payload: Item = req.body
-        create.run(payload.code, payload.name, payload.tags, payload.description)
-        res.status(201).location(`/code/${payload.code}`).send(payload)
+        let { code, name, tags, description } = payload
+        const result = create.run(code, name, tags, description)
+        const created = { id: result.lastInsertRowid, code, name, tags, description }
+        res.status(201).location(`/id/${result.lastInsertRowid}`).send(created)
     }
     catch (e) 
     {
