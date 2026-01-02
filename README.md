@@ -161,7 +161,7 @@ Example update payload (JSON):
 ```
 
 Example `curl`:
-`curl -X PUT http://localhost:3000/apiv1/item/update/1 -H "Content-Type: application/json" -d '{"code":"SKU000001", "name":"Item 1", "tags":"essentials", "description":"Item 1 description."}'`
+`curl -X PUT http://localhost:3000/apiv1/item/update/id/1 -H "Content-Type: application/json" -d '{"code":"SKU000001", "name":"Item 1", "tags":"essentials", "description":"Item 1 description."}'`
 will return
 ```json
 {
