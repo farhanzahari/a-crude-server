@@ -49,7 +49,9 @@ Upon success the response will send the payload back with status `201`.
 Example `curl`:
 
 `curl -X POST http://localhost:3000/apiv1/item/create -H "Content-Type: application/json" -d '{"code":"SKU000001", "name":"Item 1", "tags":"electronics", "description":"Item 1 description."}'`
+
 will return
+
 ```json
 {
     "id": 1,
