@@ -1,4 +1,4 @@
-# A Crude Server
+# A CRUDe Server
 A simple server to store item code, name, tags, and it's decription.
 
 ## How to deploy
