@@ -67,8 +67,11 @@ as the response payload with status `201`.
 The (GET) endpoint will send back a list of all item.
 
 Example `curl`:
+
 `curl http://localhost:3000/apiv1/item/all`
+
 will return
+
 ```json
 [
     {
@@ -87,14 +90,18 @@ will return
     }
 ]
 ```
+
 as the response payload with status `200`.
 
 ### 3. Get item by `id` (http://localhost:3000/apiv1/item/id/:id) (GET)
 The (GET) endpoint will send back an item with the supplied `id` in the url.
 
 Example `curl`:
+
 `curl http://localhost:3000/apiv1/item/id/1`
+
 will return
+
 ```json
 {
     "id": 1,
@@ -104,14 +111,18 @@ will return
     "description": "Item description."
 }
 ```
+
 as the response payload with status `200`.
 
 ### 4. Get item by `code` (http://localhost:3000/apiv1/item/code/:id) (GET)
 The (GET) endpoint will send back an item with the supplied `code` in the url.
 
 Example `curl`:
+
 `curl http://localhost:3000/apiv1/item/code/SKU000001`
+
 will return
+
 ```json
 {
     "id": 1,
@@ -121,14 +132,18 @@ will return
     "description": "Item description."
 }
 ```
+
 as the response payload with status `200`.
 
 ### 5. Get item by `tags` (http://localhost:3000/apiv1/item/tags/:tags) (GET)
 The (GET) endpoint will send back items with the supplied `code` in the url.
 
 Example `curl`:
+
 `curl http://localhost:3000/apiv1/item/tags/electronics`
+
 will return
+
 ```json
 [
     {
@@ -147,12 +162,14 @@ will return
     }
 ]
 ```
+
 as the response payload with status `200`.
 
 ### 6. Update item by `id` (http://localhost:3000/apiv1/item/id/:id) (PUT)
 The (PUT) endpoint will update an item with the supplied `id` in the url.
 
 Example update payload (JSON):
+
 ```json
 {
     "code": "SKU000001",
@@ -163,8 +180,11 @@ Example update payload (JSON):
 ```
 
 Example `curl`:
+
 `curl -X PUT http://localhost:3000/apiv1/item/update/id/1 -H "Content-Type: application/json" -d '{"code":"SKU000001", "name":"Item 1", "tags":"essentials", "description":"Item 1 description."}'`
+
 will return
+
 ```json
 {
     "id": 1,
@@ -174,11 +194,14 @@ will return
     "description": "Item 1 description."
 }
 ```
+
 as the response payload with status `201`.
 
 ### 7. Delete item by `id` (http://localhost:3000/apiv1/item/delete/id/:id) (DELETE)
 The (DELETE) endpoint will delete a resource with the supplied `id`.
 
 Example `curl`:
+
 `curl -X DELETE http://localhost:3000/apiv1/item/delete/id/1`
+
 will delete the resource with `"id": 1` and return status `204` (nothing).
